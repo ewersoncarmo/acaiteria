@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "59d71dbb-5690-4701-814d-697d142f12b5",
+		"name": "Acaiteria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "escolher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"acai\": {\n\t\t\"tamanho\": 1,\n\t\t\"sabor\": 2\n\t}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/acai/escolher/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"acai",
+						"escolher",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personalizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"adicionais\": [\n\t\t{\n\t\t\t\"adicional\": 1\n\t\t},\n\t\t{\n\t\t\t\"adicional\": 2\n\t\t},\n\t\t{\n\t\t\t\"adicional\": 3\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/acai/1/personalizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"acai",
+						"1",
+						"personalizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "montar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/acai/1/montar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"acai",
+						"1",
+						"montar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ed58c6f1-3657-4a26-8ee3-d816f98d64e5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d2a56760-6301-4b7a-aba9-c902eefaff1a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
